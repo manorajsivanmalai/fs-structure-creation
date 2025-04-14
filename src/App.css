@@ -1,0 +1,97 @@
+.container {
+  padding: 2rem;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+
+.folder {
+  margin-left: 1rem;
+  border-left: 2px solid #ddd;
+  padding-left: 1rem;
+}
+
+.folder-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.folder-name {
+  font-weight: bold;
+  flex-grow: 1;
+}
+
+.toggle-btn,
+.action-btn {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 1rem;
+  color: #333;
+}
+
+.toggle-btn:hover,
+.action-btn:hover {
+  color: #007bff;
+}
+
+.add-form {
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.input,
+.textarea {
+  display: block;
+  margin-top: 0.3rem;
+  margin-bottom: 0.5rem;
+  padding: 0.4rem;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.submit-btn {
+  padding: 0.4rem 0.8rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  background-color: #0056b3;
+}
+
+.folder-children {
+  margin-left: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+.file-card {
+  background-color: #f7f7f7;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 0.5rem;
+  margin-top: 0.3rem;
+}
+
+.file-name {
+  font-weight: bold;
+  margin-bottom: 0.3rem;
+}
+
+.file-content {
+  background: #eee;
+  padding: 0.4rem;
+  white-space: pre-wrap;
+  font-family: monospace;
+  border-radius: 4px;
+}
