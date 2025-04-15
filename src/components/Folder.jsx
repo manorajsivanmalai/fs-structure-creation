@@ -1,11 +1,11 @@
 import { FaChevronDown, FaChevronRight, FaFolderPlus, FaFileAlt } from "react-icons/fa";
 import React, { useState } from "react";
-const Folder = ({ folder, onAdd }) => {
+const Folder = ({ folder, onAdd,setFile }) => {
     const [isOpen, setIsOpen] = useState(false);
     const [addType, setAddType] = useState(null);
     const [name, setName] = useState("");
     const [fileContent, setFileContent] = useState("");
-    const [file,setFile]=useState("");
+   
     const handleAdd = () => {
       if (!name) return;
       const newItem = {
@@ -19,7 +19,7 @@ const Folder = ({ folder, onAdd }) => {
       setFileContent("");
       setAddType(null);
     };
-    console.log(file);
+
     
   
     return (
@@ -41,15 +41,18 @@ const Folder = ({ folder, onAdd }) => {
               value={name}
               onChange={(e) => setName(e.target.value)}
             />
-            {addType === "file" && (
+            {addType === "file" && (<>
               <textarea
                 className="textarea"
                 placeholder="Enter file content"
                 value={fileContent}
                 onChange={(e) => setFileContent(e.target.value)}
               />
+              <span> or </span> 
+               <input type="file" onChange={(e)=>setFile(e.target.files[0])} />
+              </>
             )}
-            <input type="file" onChange={(e)=>setFile(e)} />
+           
             <button className="submit-btn" onClick={handleAdd}>Add {addType}</button>
           </div>
         )}
